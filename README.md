@@ -2,9 +2,7 @@
 
 Easy way to build responses.
 
-[![npm version](https://badge.fury.io/js/koa-server-response.svg)](https://badge.fury.io/js/koa-server-response)
-
-[![Build Status](https://travis-ci.org/bertolo1988/koa-server-response.svg?branch=master)](https://travis-ci.org/bertolo1988/koa-server-response)
+[![npm version](https://badge.fury.io/js/koa-server-response.svg)](https://badge.fury.io/js/koa-server-response) [![Build Status](https://travis-ci.org/bertolo1988/koa-server-response.svg?branch=master)](https://travis-ci.org/bertolo1988/koa-server-response)
 
 ## Install
 
