@@ -1,8 +1,8 @@
 {
   "name": "koa-server-response",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Easy way to build responses.",
-  "main": "ServerResponse.js",
+  "main": "KoaServerResponse.js",
   "dependencies": {},
   "devDependencies": {
     "eslint": "5.16.0",
@@ -23,7 +23,14 @@
     "type": "git",
     "url": "git+https://github.com/bertolo1988/koa-server-response.git"
   },
-  "keywords": [],
+  "keywords": [
+    "koa",
+    "server",
+    "respose",
+    "http",
+    "httpstatus",
+    "status"
+  ],
   "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "license": "MIT",
   "bugs": {
