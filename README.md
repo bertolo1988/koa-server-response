@@ -10,7 +10,7 @@ Easy way to build responses.
 
 ## How to use
 
-```
+```javascript
 const Koa = require('koa');
 const app = new Koa();
 const ServerResponse = require('koa-server-response')
