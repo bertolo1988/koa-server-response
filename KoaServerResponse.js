@@ -1,80 +1,83 @@
-function setResponse(ctx, message, data, status) {
+function setResponse(ctx, status, message, data) {
   ctx.status = status
-  ctx.message = message
-  ctx.body = data
-  ctx.createdAt = new Date()
+  ctx.body = {
+    message,
+    data,
+    createdAt: new Date()
+  }
+  return ctx.body
 }
 
 module.exports = class KoaServerResponse {
   // 2XX
   static success(ctx, message = 'OK', data) {
-    setResponse(ctx, message, data, 200)
+    return setResponse(ctx, 200, message, data)
   }
 
   static successCreated(ctx, message = 'Created', data) {
-    setResponse(ctx, message, data, 201)
+    return setResponse(ctx, 201, message, data)
   }
 
   static successAccepted(ctx, message = 'Accepted', data) {
-    setResponse(ctx, message, data, 202)
+    return setResponse(ctx, 202, message, data)
   }
 
   static successNoContent(ctx, message = 'No Content', data) {
-    setResponse(ctx, message, data, 204)
+    return setResponse(ctx, 204, message, data)
   }
 
   //3XX
   static redirectionNotModified(ctx, message = 'Not Modified', data) {
-    setResponse(ctx, message, data, 304)
+    return setResponse(ctx, 304, message, data)
   }
 
   //4XX
   static clientErrorBadRequest(ctx, message = 'Bad Request', data) {
-    setResponse(ctx, message, data, 400)
+    return setResponse(ctx, 400, message, data)
   }
 
   static clientErrorUnauthorized(ctx, message = 'Unauthorized', data) {
-    setResponse(ctx, message, data, 401)
+    return setResponse(ctx, 401, message, data)
   }
 
   static clientErrorPaymentRequired(ctx, message = 'Payment Required', data) {
-    setResponse(ctx, message, data, 402)
+    return setResponse(ctx, 402, message, data)
   }
 
   static clientErrorForbidden(ctx, message = 'Forbidden', data) {
-    setResponse(ctx, message, data, 403)
+    return setResponse(ctx, 403, message, data)
   }
 
   static clientErrorNotFound(ctx, message = 'Not Found', data) {
-    setResponse(ctx, message, data, 404)
+    return setResponse(ctx, 404, message, data)
   }
 
   static clientErrorMethodNotAllowed(ctx, message = 'Method Not Allowed', data) {
-    setResponse(ctx, message, data, 405)
+    return setResponse(ctx, 405, message, data)
   }
 
   static clientErrorNotAcceptable(ctx, message = 'Not Acceptable', data) {
-    setResponse(ctx, message, data, 406)
+    return setResponse(ctx, 406, message, data)
   }
 
   static clientErrorRequestTimeout(ctx, message = 'Request Timeout', data) {
-    setResponse(ctx, message, data, 408)
+    return setResponse(ctx, 408, message, data)
   }
 
   static clientErrorConflict(ctx, message = 'Conflict', data) {
-    setResponse(ctx, message, data, 409)
+    return setResponse(ctx, 409, message, data)
   }
 
   //5XX
   static serverError(ctx, message = 'Server Error', data) {
-    setResponse(ctx, message, data, 500)
+    return setResponse(ctx, 500, message, data)
   }
 
   static serverErrorNotImplemented(ctx, message = 'Not Implemented', data) {
-    setResponse(ctx, message, data, 501)
+    return setResponse(ctx, 501, message, data)
   }
 
   static serverErrorServiceUnavailable(ctx, message = 'Service Unavailable', data) {
-    setResponse(ctx, message, data, 503)
+    return setResponse(ctx, 503, message, data)
   }
 }

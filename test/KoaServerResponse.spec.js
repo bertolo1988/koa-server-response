@@ -6,17 +6,17 @@ describe('ServerResponse class', function() {
     let ctx = {}
     KoaServerResponse.success(ctx)
     ctx.status.should.be.eql(200)
-    ctx.message.should.be.eql('OK')
-    ctx.createdAt.should.be.a.Date()
-    should.not.exist(ctx.body)
+    ctx.body.message.should.be.eql('OK')
+    ctx.body.createdAt.should.be.a.Date()
+    should.not.exist(ctx.body.data)
   })
 
   it('should receive default HTTP 500', () => {
     let ctx = {}
     KoaServerResponse.serverError(ctx)
     ctx.status.should.be.eql(500)
-    ctx.message.should.be.eql('Server Error')
-    ctx.createdAt.should.be.a.Date()
-    should.not.exist(ctx.body)
+    ctx.body.message.should.be.eql('Server Error')
+    ctx.body.createdAt.should.be.a.Date()
+    should.not.exist(ctx.body.data)
   })
 })

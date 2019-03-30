@@ -20,6 +20,16 @@ app.use(async ctx => {
 app.listen(3000);
 ```
 
+Response will look like:
+
+```
+STATUS: 200 OK
+{
+    "message": "OK",
+    "createdAt": "2019-03-30T19:54:28.117Z"
+}
+```
+
 ## Linting
 
 `npm run lint`
