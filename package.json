@@ -1,8 +1,11 @@
 {
   "name": "koa-server-response",
   "version": "0.0.1",
-  "description": "Easy way to build responses.",
+  "description": "Easy way to build responses",
   "main": "KoaServerResponse.js",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "dependencies": {},
   "devDependencies": {
     "eslint": "5.16.0",
